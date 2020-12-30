@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drum Kit</title>
+    <style>
+        body {
+            background-color: black
+        }
+
+        h1 {
+            color: wheat;
+            text-align: center;
+            font-size: 5em;
+            line-height: : 5em;
+            margin: 0px 80px 0px 0px;
+            padding: 0px 0px 0px 0px;
+            text-decoration: teal;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #icon {
+            width: 200px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .parts {
+            width: 200px;
+            margin: 100px 0px 0px 0px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <img src="full drum.png" id="icon"/>
+    <h1> Drum Kit </h1>
+    
+
+    <audio src="hi hat.mp3" id="hihat"></audio>
+    <audio src="snare.mp3" id="snare"></audio>
+    <audio src="bass.mp3" id="bass"></audio>
+    <audio src="hi tom.wav" id="hitom"></audio>
+    <audio src="floor tom.mp3" id="floortom"></audio>
+
+    <div class="container">
+        <img src="hi hat.png" class="parts" onclick="play1()"/>
+        <img src="snare.png" class="parts" onclick="play2()"/>
+        <img src="bass.png" class="parts" onclick="play3()"/>
+        <img src="hi tom.png" class="parts" onclick="play4()"/>
+        <img src="floor tom.png" class="parts" onclick="play5()"/>
+
+    </div>
+
+    <script>
+        function play1(id) {
+            var audios = document.getElementById("hihat");
+            audios.play();
+        }
+        function play2(id) {
+            var audios = document.getElementById("snare");
+            audios.play();
+        }
+        function play3(id) {
+            var audios = document.getElementById("bass");
+            audios.play();
+        }
+        function play4(id) {
+            var audios = document.getElementById("hitom");
+            audios.play();
+        }
+        function play5(id) {
+            var audios = document.getElementById("floortom");
+            audios.play();
+        }
+    </script>
+</body>
+</html>
